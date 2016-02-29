@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SoundWaves.iml" filepath="$PROJECT_DIR$/SoundWaves.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/eqwaves/siriwave.iml" filepath="$PROJECT_DIR$/eqwaves/siriwave.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eqwaves/eqwaves.iml" filepath="$PROJECT_DIR$/eqwaves/eqwaves.iml" />
     </modules>
   </component>
 </project>
