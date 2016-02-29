@@ -1,4 +1,4 @@
-package com.yalantis.soundwaves;
+package com.yalantis.eqwaves;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -13,7 +13,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 
 import com.yalantis.audio.lib.AudioUtil;
-import com.yalantis.siri.util.Eqwaves;
+import com.yalantis.waves.util.Eqwaves;
 
 public class DemoActivity extends AppCompatActivity {
 

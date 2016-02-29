@@ -1,9 +1,9 @@
-package com.yalantis.siri.util;
+package com.yalantis.waves.util;
 
 import android.opengl.GLES20;
 import android.util.Log;
 
-import com.yalantis.siri.interfaces.ShaderType;
+import com.yalantis.waves.interfaces.ShaderType;
 
 import timber.log.Timber;
 

@@ -1,9 +1,9 @@
-package com.yalantis.siri.gl;
+package com.yalantis.waves.gl;
 
 import android.opengl.GLES20;
 
-import com.yalantis.siri.Const;
-import com.yalantis.siri.interfaces.Renderable;
+import com.yalantis.waves.Const;
+import com.yalantis.waves.interfaces.Renderable;
 
 import java.nio.FloatBuffer;
 

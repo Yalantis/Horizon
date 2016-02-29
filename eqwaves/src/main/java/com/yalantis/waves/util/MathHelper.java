@@ -1,4 +1,4 @@
-package com.yalantis.siri.util;
+package com.yalantis.waves.util;
 
 /**
  * Created by Artem Kholodnyi on 11/13/15.

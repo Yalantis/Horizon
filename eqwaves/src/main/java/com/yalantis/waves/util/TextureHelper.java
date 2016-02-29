@@ -1,4 +1,4 @@
-package com.yalantis.siri.util;
+package com.yalantis.waves.util;
 
 import android.content.Context;
 import android.graphics.Bitmap;

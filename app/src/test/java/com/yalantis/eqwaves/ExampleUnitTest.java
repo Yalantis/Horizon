@@ -1,4 +1,4 @@
-package com.yalantis.soundwaves;
+package com.yalantis.eqwaves;
 
 import org.junit.Test;
 

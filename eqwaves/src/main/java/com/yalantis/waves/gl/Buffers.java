@@ -1,6 +1,6 @@
-package com.yalantis.siri.gl;
+package com.yalantis.waves.gl;
 
-import com.yalantis.siri.Const;
+import com.yalantis.waves.Const;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

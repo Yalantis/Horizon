@@ -1,4 +1,4 @@
-package com.yalantis.siri.gl;
+package com.yalantis.waves.gl;
 
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
@@ -6,10 +6,10 @@ import android.opengl.Matrix;
 import android.support.annotation.ColorInt;
 import android.support.annotation.Size;
 
-import com.yalantis.siri.R;
-import com.yalantis.siri.util.ColorUtil;
-import com.yalantis.siri.util.RawResourceReader;
-import com.yalantis.siri.util.ShaderHelper;
+import com.yalantis.waves.R;
+import com.yalantis.waves.util.ColorUtil;
+import com.yalantis.waves.util.RawResourceReader;
+import com.yalantis.waves.util.ShaderHelper;
 
 import java.util.concurrent.Executors;
 

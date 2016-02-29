@@ -1,4 +1,4 @@
-package com.yalantis.siri.util;
+package com.yalantis.waves.util;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.opengl.GLSurfaceView;
 import android.support.annotation.ColorInt;
 
 import com.yalantis.audio.lib.AudioUtil;
-import com.yalantis.siri.gl.BezierRenderer;
+import com.yalantis.waves.gl.BezierRenderer;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

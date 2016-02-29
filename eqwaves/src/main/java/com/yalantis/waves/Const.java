@@ -1,4 +1,4 @@
-package com.yalantis.siri;
+package com.yalantis.waves;
 
 /**
  * Started by Artem Kholodnyi on 11/1/15 12:55 PM

@@ -1,9 +1,9 @@
-package com.yalantis.siri.gl;
+package com.yalantis.waves.gl;
 
 import android.graphics.Color;
 
-import com.yalantis.siri.Const;
-import com.yalantis.siri.util.ColorUtil;
+import com.yalantis.waves.Const;
+import com.yalantis.waves.util.ColorUtil;
 
 import java.nio.FloatBuffer;
 

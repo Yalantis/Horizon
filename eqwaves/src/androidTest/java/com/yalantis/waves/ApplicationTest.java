@@ -1,4 +1,4 @@
-package com.yalantis.siri;
+package com.yalantis.waves;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

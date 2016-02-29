@@ -1,4 +1,4 @@
-package com.yalantis.siri.interfaces;
+package com.yalantis.waves.interfaces;
 
 import android.opengl.GLES20;
 import android.support.annotation.IntDef;
