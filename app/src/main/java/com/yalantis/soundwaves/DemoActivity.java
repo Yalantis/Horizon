@@ -38,6 +38,7 @@ public class DemoActivity extends AppCompatActivity {
         glSurfaceView = (GLSurfaceView) findViewById(R.id.gl_surface);
         mEqwaves = new Eqwaves(glSurfaceView, getResources().getColor(R.color.background),
                 RECORDER_SAMPLE_RATE, RECORDER_CHANNELS, RECORDER_ENCODING_BIT);
+        mEqwaves.setMaxVolumeDb(MAX_DECIBELS);
     }
 
     @Override
