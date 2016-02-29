@@ -4,7 +4,7 @@
 
 #### [How We Created EqWaves] (TODO: link to article)
 
-<img src="https://dl.dropboxusercontent.com/content_link/tof9jMMD9jHI2YLIVTAEtWw82rbm9YsPrLaQXg9cHSYgiCOogi8aumlBUDXq7DcA/file" alt="example" style="width:720;height:400">
+<img src="https://dl.dropboxusercontent.com/content_link/lK54WosydF1ZrPdXNTgi7swr21NzQfvOWD3M24ZHB5sLHjn9Gz54mqJVgSsCfOu2/file" alt="example" style="width:720;height:400">
 
 # Usage
 
