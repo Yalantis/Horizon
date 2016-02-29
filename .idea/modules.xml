@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SoundWaves.iml" filepath="$PROJECT_DIR$/SoundWaves.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EqWaves.iml" filepath="$PROJECT_DIR$/EqWaves.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/eqwaves/eqwaves.iml" filepath="$PROJECT_DIR$/eqwaves/eqwaves.iml" />
     </modules>
