@@ -4,7 +4,7 @@
 
 #### [How We Created EqWaves] (TODO: link to article)
 
-<img src="https://dl.dropboxusercontent.com/content_link/lK54WosydF1ZrPdXNTgi7swr21NzQfvOWD3M24ZHB5sLHjn9Gz54mqJVgSsCfOu2/file" alt="example" style="width:720;height:400">
+<img src="https://dl.dropboxusercontent.com/content_link/GiNWvdW7dfHmMdvAMU9N5BBVpfCgGZx1nj04KssrLnNOnN1eG5M09rLkzR5h1oT9/file" alt="example" style="width:720;height:400">
 
 # Usage
 
@@ -27,6 +27,7 @@
 
 	````java
    byte[] buffer = new byte[bufferSize];
+   //here we put some sound data to the buffer
    mEqwaves.updateView(buffer);
     ```
 # Compatibility

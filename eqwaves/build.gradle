@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply from: 'mavenpush.gradle'
 
 android {
     compileSdkVersion 23
@@ -25,5 +26,5 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile "com.jakewharton.timber:timber:4.1.1"
-    compile "com.android.support:support-annotations:23.1.1"
+    compile "com.android.support:support-annotations:23.2.0"
 }
