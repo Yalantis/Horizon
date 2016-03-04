@@ -7,6 +7,8 @@ import android.media.AudioRecord;
 import android.media.MediaRecorder;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -30,6 +32,26 @@ public class DemoActivity extends AppCompatActivity {
     private GLSurfaceView glSurfaceView;
 
     private Thread recordingThread;
+    private byte[] buffer;
+
+    /**
+     * this listener helps us to synchronise real time
+     * and actual drawing
+     */
+    private AudioRecord.OnRecordPositionUpdateListener recordPositionUpdateListener = new AudioRecord.OnRecordPositionUpdateListener() {
+        @Override
+        public void onMarkerReached(AudioRecord recorder) {
+            //empty for now
+        }
+
+        @Override
+        public void onPeriodicNotification(AudioRecord recorder) {
+            if (audioRecord.getRecordingState() == AudioRecord.RECORDSTATE_RECORDING
+                    && audioRecord.read(buffer, 0, buffer.length) != -1) {
+                mEqwaves.updateView(buffer);
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,19 +64,30 @@ public class DemoActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        checkPermissionsAndStart();
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
         glSurfaceView.onResume();
-        checkPermissionsAndStart();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         glSurfaceView.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
         if (audioRecord != null) {
             audioRecord.release();
         }
+        AudioUtil.disposeProcessor();
     }
 
     @Override
@@ -95,12 +128,16 @@ public class DemoActivity extends AppCompatActivity {
                 super.run();
                 int bufferSize = 2 * AudioRecord.getMinBufferSize(RECORDER_SAMPLE_RATE,
                         RECORDER_CHANNELS, RECORDER_AUDIO_ENCODING);
-                byte[] buffer = new byte[bufferSize];
-                while (audioRecord.getRecordingState() == AudioRecord.RECORDSTATE_RECORDING
-                        && audioRecord.read(buffer, 0, bufferSize) != -1) {
-                    mEqwaves.updateView(buffer);
-                }
-                AudioUtil.disposeProcessor();
+                buffer = new byte[bufferSize];
+                Looper.prepare();
+                audioRecord.setRecordPositionUpdateListener(recordPositionUpdateListener, new Handler(Looper.myLooper()));
+                int bytePerSample = RECORDER_ENCODING_BIT / 8;
+                float samplesToDraw = bufferSize / bytePerSample;
+                audioRecord.setPositionNotificationPeriod((int) samplesToDraw);
+                //We need to read first chunk to motivate recordPositionUpdateListener.
+                //Mostly, for lower versions - https://code.google.com/p/android/issues/detail?id=53996
+                audioRecord.read(new byte[bufferSize], 0, bufferSize);
+                Looper.loop();
             }
         };
     }
