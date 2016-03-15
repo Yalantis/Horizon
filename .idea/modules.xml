@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EqWaves.iml" filepath="$PROJECT_DIR$/EqWaves.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Horizon.iml" filepath="$PROJECT_DIR$/Horizon.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/eqwaves/eqwaves.iml" filepath="$PROJECT_DIR$/eqwaves/eqwaves.iml" />
+      <module fileurl="file://$PROJECT_DIR$/horizon/horizon.iml" filepath="$PROJECT_DIR$/horizon/horizon.iml" />
     </modules>
   </component>
 </project>

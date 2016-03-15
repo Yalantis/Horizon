@@ -1,1 +1,1 @@
-include ':app', ':eqwaves'
+include ':app', ':horizon'

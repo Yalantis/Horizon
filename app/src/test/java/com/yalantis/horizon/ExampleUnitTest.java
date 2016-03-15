@@ -1,4 +1,4 @@
-package com.yalantis.eqwaves;
+package com.yalantis.horizon;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.yalantis.eqwaves;
+package com.yalantis.horizon;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -15,7 +15,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 
 import com.yalantis.audio.lib.AudioUtil;
-import com.yalantis.waves.util.Eqwaves;
+import com.yalantis.waves.util.Horizon;
 
 public class DemoActivity extends AppCompatActivity {
 
@@ -28,7 +28,7 @@ public class DemoActivity extends AppCompatActivity {
     private static final int MAX_DECIBELS = 120;
 
     private AudioRecord audioRecord;
-    private Eqwaves mEqwaves;
+    private Horizon mHorizon;
     private GLSurfaceView glSurfaceView;
 
     private Thread recordingThread;
@@ -48,7 +48,7 @@ public class DemoActivity extends AppCompatActivity {
         public void onPeriodicNotification(AudioRecord recorder) {
             if (audioRecord.getRecordingState() == AudioRecord.RECORDSTATE_RECORDING
                     && audioRecord.read(buffer, 0, buffer.length) != -1) {
-                mEqwaves.updateView(buffer);
+                mHorizon.updateView(buffer);
             }
         }
     };
@@ -58,9 +58,9 @@ public class DemoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo);
         glSurfaceView = (GLSurfaceView) findViewById(R.id.gl_surface);
-        mEqwaves = new Eqwaves(glSurfaceView, getResources().getColor(R.color.background),
+        mHorizon = new Horizon(glSurfaceView, getResources().getColor(R.color.background),
                 RECORDER_SAMPLE_RATE, RECORDER_CHANNELS, RECORDER_ENCODING_BIT);
-        mEqwaves.setMaxVolumeDb(MAX_DECIBELS);
+        mHorizon.setMaxVolumeDb(MAX_DECIBELS);
     }
 
     @Override

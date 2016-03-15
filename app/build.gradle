@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.yalantis.eqwaves"
+        applicationId "com.yalantis.horizon"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
@@ -23,5 +23,5 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.0'
-    compile project(':eqwaves')
+    compile project(':horizon')
 }

@@ -16,7 +16,7 @@ import java.nio.FloatBuffer;
 /**
  * Created by roma on 2/22/16.
  */
-public class Eqwaves {
+public class Horizon {
 
     private static final int NUMBER_OF_FREQ_BARS = 5;
     private static final int MAX_DECIBELS = 90;
@@ -24,9 +24,9 @@ public class Eqwaves {
     private int maxVolumeDb = MAX_DECIBELS;
     private int bytesPerSample;
     private BezierRenderer mRenderer;
-    private float[] previousSpecter;
+    private float[] previousSpectrum;
 
-    public Eqwaves(GLSurfaceView glSurfaceView, @ColorInt int backgroundColor,
+    public Horizon(GLSurfaceView glSurfaceView, @ColorInt int backgroundColor,
                    int sampleRate, int numChannels, int bitPerSample) {
         initView(glSurfaceView, backgroundColor);
         this.bytesPerSample = bitPerSample / numChannels / BITS_IN_BYTE;
@@ -34,13 +34,13 @@ public class Eqwaves {
     }
 
     /**
-     * Calculates how strong are frequencies of each group are represented in the provided spectrum
+     * Calculates how strong are frequencies of each group represented in the provided spectrum
      *
      * @param amplitudes   current spectrum
      * @param groupsNumber amount of groups to separate
      * @return array of each group strength. Each value meets [0;1] interval
      */
-    private float[] fetchSpecter(float[] amplitudes, int groupsNumber) {
+    private float[] fetchSpectrum(float[] amplitudes, int groupsNumber) {
         int approximateGroupLength = amplitudes.length / groupsNumber;
         float[] result = new float[groupsNumber];
         double tmpSum;
@@ -60,24 +60,24 @@ public class Eqwaves {
     }
 
     /**
-     * Changes specter values according to volume level
+     * Changes spectrum values according to volume level
      *
      * @param buffer  - chunk of music
-     * @param specter - current specter values
+     * @param spectrum - current spectrum values
      */
-    private void calculateVolumeLevel(byte[] buffer, float[] specter) {
+    private void calculateVolumeLevel(byte[] buffer, float[] spectrum) {
         long currentMaxDb = getMaxDecibels(buffer);
         float coefficient = (float) currentMaxDb / maxVolumeDb;
         float maxCoefficient = 0;
         for (int i = 0; i < NUMBER_OF_FREQ_BARS; i++) {
-            if (maxCoefficient < specter[i]) {
-                maxCoefficient = specter[i];
+            if (maxCoefficient < spectrum[i]) {
+                maxCoefficient = spectrum[i];
             }
         }
         if (maxCoefficient > 0) {
             coefficient /= maxCoefficient;
             for (int i = 0; i < NUMBER_OF_FREQ_BARS; i++) {
-                specter[i] *= coefficient;
+                spectrum[i] *= coefficient;
             }
         }
     }
@@ -122,14 +122,15 @@ public class Eqwaves {
     /**
      * Provides smooth lowering for waves
      *
-     * @param specter - current specter values
+     * @param spectrum - current spectrum values
      */
-    private void interpolate(float[] specter) {
-        for (int i = 0; i < specter.length; i++) {
-            if (specter[i] < previousSpecter[i]) {
-                specter[i] = (float) (previousSpecter[i] * 0.97);
+    private void interpolate(float[] spectrum) {
+        for (int i = 0; i < spectrum.length; i++) {
+            if (spectrum[i] < previousSpectrum[i]) {
+                double interpolationCoefficient = 0.97;
+                spectrum[i] = (float) (previousSpectrum[i] * interpolationCoefficient);
             }
-            previousSpecter[i] = specter[i];
+            previousSpectrum[i] = spectrum[i];
         }
     }
 
@@ -167,15 +168,15 @@ public class Eqwaves {
         int amplitudeLength = (int) Math.pow(2,
                 32 - Integer.numberOfLeadingZeros(buffer.length / bytesPerSample - 1)); //should be a power of two
         float[] amplitudes = new float[amplitudeLength];
-        float[] specter;
+        float[] spectrum;
         AudioUtil.fft(buffer, amplitudes);
 
-        specter = fetchSpecter(amplitudes, NUMBER_OF_FREQ_BARS);
-        if (previousSpecter == null) {
-            previousSpecter = specter;
+        spectrum = fetchSpectrum(amplitudes, NUMBER_OF_FREQ_BARS);
+        if (previousSpectrum == null) {
+            previousSpectrum = spectrum;
         }
-        calculateVolumeLevel(buffer, specter);
-        interpolate(specter);
-        mRenderer.setAmplitudes(specter);
+        calculateVolumeLevel(buffer, spectrum);
+        interpolate(spectrum);
+        mRenderer.setAmplitudes(spectrum);
     }
 }

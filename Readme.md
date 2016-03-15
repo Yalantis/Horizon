@@ -1,4 +1,4 @@
-# EqWaves - Simple visual equaliser for Android
+# Horizon - Simple visual equaliser for Android
 
 #### This project aims to provide pretty cool equaliser for any Android audio project. Made in [Yalantis] (https://yalantis.com/?utm_source=github)
 
@@ -19,7 +19,7 @@
 2. Initialize Eqwave object with params regarding to your sound
 
     ````java
-    mEqwaves = new Eqwaves(glSurfaceView, getResources().getColor(R.color.background),
+    mHorizon = new Horizon(glSurfaceView, getResources().getColor(R.color.background),
                     RECORDER_SAMPLE_RATE, RECORDER_CHANNELS, RECORDER_ENCODING_BIT);
     ```
 
@@ -28,7 +28,7 @@
 	````java
    byte[] buffer = new byte[bufferSize];
    //here we put some sound data to the buffer
-   mEqwaves.updateView(buffer);
+   mHorizon.updateView(buffer);
     ```
 # Compatibility
   
