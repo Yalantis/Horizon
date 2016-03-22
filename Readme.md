@@ -2,9 +2,9 @@
 
 #### This project aims to provide pretty cool equaliser for any Android audio project. Made in [Yalantis] (https://yalantis.com/?utm_source=github)
 
-#### [How We Created EqWaves] (TODO: link to article)
+#### [How We Created Horizon] (https://yalantis.com/blog/horizon-open-source-library-for-sound-visualization/)
 
-<img src="https://dl.dropboxusercontent.com/content_link/GiNWvdW7dfHmMdvAMU9N5BBVpfCgGZx1nj04KssrLnNOnN1eG5M09rLkzR5h1oT9/file" alt="example" style="width:720;height:400">
+<img src="https://photos-4.dropbox.com/t/2/AADx5IHcYE3W7mcYXOa5Ld1cEue8Y-WxNCz7OuGaowgrbA/12/303862396/png/32x32/3/1458651600/0/2/blog_article_header.png/EOy-xqkCGO2gDiACKAI/5FtBhn3W5mYpCiYUXLhXaMs5t7jKkohow0tMYoRslfg?size_mode=3&size=1024x768" alt="example" style="width:720;height:400">
 
 # Usage
 
