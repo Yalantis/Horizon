@@ -2,7 +2,7 @@
 
 #### This project aims to provide pretty cool equaliser for any Android audio project. Made in [Yalantis] (https://yalantis.com/?utm_source=github)
 
-#### [How We Created Horizon] (https://yalantis.com/blog/horizon-open-source-library-for-sound-visualization/)
+#### [Read more about Horizon] (https://yalantis.com/blog/horizon-open-source-library-for-sound-visualization/)
 
 <img src="https://photos-4.dropbox.com/t/2/AADx5IHcYE3W7mcYXOa5Ld1cEue8Y-WxNCz7OuGaowgrbA/12/303862396/png/32x32/3/1458651600/0/2/blog_article_header.png/EOy-xqkCGO2gDiACKAI/5FtBhn3W5mYpCiYUXLhXaMs5t7jKkohow0tMYoRslfg?size_mode=3&size=1024x768" alt="example" style="width:720;height:400">
 
@@ -10,20 +10,20 @@
 
 *For a working implementation, please have a look at the Sample Project - sample*
 
-<a href="https://play.google.com/store/apps/details?id=com.yalantis.eqwaves&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png" width="185" height="60"/></a>
+<a href="https://play.google.com/store/apps/details?id=com.yalantis.horizon&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png" width="185" height="60"/></a>
 
 1. Include the library as local library project.
 
     ``` compile 'com.yalantis:eqwaves:1.0.0' ```
     
-2. Initialize Eqwave object with params regarding to your sound
+2. Initialize Horizon object with params regarding to your sound
 
     ````java
     mHorizon = new Horizon(glSurfaceView, getResources().getColor(R.color.background),
                     RECORDER_SAMPLE_RATE, RECORDER_CHANNELS, RECORDER_ENCODING_BIT);
     ```
 
-3. To update Equaliser call updateView method with chunk of sound data to proceed
+3. To update Horizon call updateView method with chunk of sound data to proceed
 
 	````java
    byte[] buffer = new byte[bufferSize];
