@@ -58,7 +58,7 @@ public class DemoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo);
         glSurfaceView = (GLSurfaceView) findViewById(R.id.gl_surface);
-        mHorizon = new Horizon(glSurfaceView, getResources().getColor(R.color.background),
+        mHorizon = new Horizon(glSurfaceView, getResources().getColor(R.color.background_color),
                 RECORDER_SAMPLE_RATE, RECORDER_CHANNELS, RECORDER_ENCODING_BIT);
         mHorizon.setMaxVolumeDb(MAX_DECIBELS);
     }

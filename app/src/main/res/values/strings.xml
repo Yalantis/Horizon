@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Horizon</string>
+    <string name="recording">Recording…</string>
 </resources>
