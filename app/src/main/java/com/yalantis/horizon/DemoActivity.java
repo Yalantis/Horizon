@@ -118,7 +118,8 @@ public class DemoActivity extends AppCompatActivity {
     }
 
     private void initRecorder() {
-        int bufferSize = 4096;
+        final int bufferSize = 2 * AudioRecord.getMinBufferSize(RECORDER_SAMPLE_RATE,
+                RECORDER_CHANNELS, RECORDER_AUDIO_ENCODING);
         audioRecord = new AudioRecord(MediaRecorder.AudioSource.MIC, RECORDER_SAMPLE_RATE, RECORDER_CHANNELS, RECORDER_AUDIO_ENCODING, bufferSize);
         AudioUtil.initProcessor(RECORDER_SAMPLE_RATE, RECORDER_CHANNELS, RECORDER_ENCODING_BIT);
 
@@ -126,8 +127,6 @@ public class DemoActivity extends AppCompatActivity {
             @Override
             public void run() {
                 super.run();
-                int bufferSize = 2 * AudioRecord.getMinBufferSize(RECORDER_SAMPLE_RATE,
-                        RECORDER_CHANNELS, RECORDER_AUDIO_ENCODING);
                 buffer = new byte[bufferSize];
                 Looper.prepare();
                 audioRecord.setRecordPositionUpdateListener(recordPositionUpdateListener, new Handler(Looper.myLooper()));
