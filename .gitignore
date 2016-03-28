@@ -3,5 +3,7 @@
 /local.properties
 /.idea
 .DS_Store
+/keystore
+/gradle.properties
 /build
 /captures
