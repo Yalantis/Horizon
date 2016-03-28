@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "com.yalantis.horizon"
@@ -17,19 +17,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    signingConfigs {
-        release {
-            storeFile file(RELEASE_STORE_FILE)
-            storePassword RELEASE_KEYSTORE_PASSWORD
-            keyAlias RELEASE_KEY_ALIAS_NAME
-            keyPassword RELEASE_KEY_ALIAS_PASSWORD
-        }
-    }
+//    signingConfigs {
+//        release {
+//            storeFile file(RELEASE_STORE_FILE)
+//            storePassword RELEASE_KEYSTORE_PASSWORD
+//            keyAlias RELEASE_KEY_ALIAS_NAME
+//            keyPassword RELEASE_KEY_ALIAS_PASSWORD
+//        }
+//    }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:appcompat-v7:24.0.0-alpha1'
     compile project(':horizon')
 }
