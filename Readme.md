@@ -14,7 +14,7 @@
 
 1. Include the library as local library project.
 
-    ``` compile 'com.yalantis:eqwaves:1.0.0' ```
+    ``` compile 'com.yalantis:eqwaves:1.0' ```
     
 2. Initialize Horizon object with params regarding to your sound
 
