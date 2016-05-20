@@ -120,7 +120,8 @@ public class DemoActivity extends AppCompatActivity {
     private void initRecorder() {
         final int bufferSize = 2 * AudioRecord.getMinBufferSize(RECORDER_SAMPLE_RATE,
                 RECORDER_CHANNELS, RECORDER_AUDIO_ENCODING);
-        audioRecord = new AudioRecord(MediaRecorder.AudioSource.MIC, RECORDER_SAMPLE_RATE, RECORDER_CHANNELS, RECORDER_AUDIO_ENCODING, bufferSize);
+        audioRecord = new AudioRecord(MediaRecorder.AudioSource.MIC, RECORDER_SAMPLE_RATE,
+                RECORDER_CHANNELS, RECORDER_AUDIO_ENCODING, bufferSize);
         AudioUtil.initProcessor(RECORDER_SAMPLE_RATE, RECORDER_CHANNELS, RECORDER_ENCODING_BIT);
 
         recordingThread = new Thread("recorder") {
@@ -135,7 +136,7 @@ public class DemoActivity extends AppCompatActivity {
                 audioRecord.setPositionNotificationPeriod((int) samplesToDraw);
                 //We need to read first chunk to motivate recordPositionUpdateListener.
                 //Mostly, for lower versions - https://code.google.com/p/android/issues/detail?id=53996
-                audioRecord.read(new byte[bufferSize], 0, bufferSize);
+                audioRecord.read(buffer, 0, bufferSize);
                 Looper.loop();
             }
         };

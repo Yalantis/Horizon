@@ -4,7 +4,7 @@
 
 #### [Read more about Horizon] (https://yalantis.com/blog/horizon-open-source-library-for-sound-visualization/)
 
-<img src="https://photos-4.dropbox.com/t/2/AADx5IHcYE3W7mcYXOa5Ld1cEue8Y-WxNCz7OuGaowgrbA/12/303862396/png/32x32/3/1458651600/0/2/blog_article_header.png/EOy-xqkCGO2gDiACKAI/5FtBhn3W5mYpCiYUXLhXaMs5t7jKkohow0tMYoRslfg?size_mode=3&size=1024x768" alt="example" style="width:720;height:400">
+<img src="https://photos-4.dropbox.com/t/2/AACBqjJCbF9QgxAH9LovkNrJx-6wP6x8gAtYzGB90PGeNg/12/303862396/png/32x32/3/1463760000/0/2/blog_article_header.png/EOy-xqkCGP3DDiACKAI/5FtBhn3W5mYpCiYUXLhXaMs5t7jKkohow0tMYoRslfg?size_mode=3&size=2048x1536" alt="example" style="width:720;height:400">
 
 # Usage
 
