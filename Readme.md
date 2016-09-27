@@ -14,8 +14,8 @@
 
 1. Include the library as local library project.
 
-    ``` compile 'com.yalantis:eqwaves:1.0' ```
-    
+    ``` compile 'com.yalantis:eqwaves:1.0.1' ```
+
 2. Initialize Horizon object with params regarding to your sound
 
     ````java
@@ -31,11 +31,15 @@
    mHorizon.updateView(buffer);
     ```
 # Compatibility
-  
+
   * Library - Android ICS 4.0+
   * Sample - Android ICS 4.0+
-  
+
 # Changelog
+
+### Version: 1.0.1
+
+  * Version update
 
 ### Version: 1.0
 
@@ -43,7 +47,7 @@
 
 ### Let us know!
 
-We’d be really happy if you sent us links to your projects where you use our component. Just send an email to github@yalantis.com And do let us know if you have any questions or suggestion regarding the library. 
+We’d be really happy if you sent us links to your projects where you use our component. Just send an email to github@yalantis.com And do let us know if you have any questions or suggestion regarding the library.
 
 ## License
 
@@ -60,12 +64,3 @@ We’d be really happy if you sent us links to your projects where you use our c
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-
-
-
-
-
-
-
-
