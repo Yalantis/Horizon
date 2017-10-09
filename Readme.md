@@ -1,10 +1,10 @@
 # Horizon - Simple visual equaliser for Android
 
-#### This project aims to provide pretty cool equaliser for any Android audio project. Made in [Yalantis] (https://yalantis.com/?utm_source=github)
+#### This project aims to provide pretty cool equaliser for any Android audio project. Made in [Yalantis](https://yalantis.com/?utm_source=github)
 
-Check this [project on dribbble] (https://dribbble.com/shots/2452050-Record-Audio-Sample)
+Check this [project on dribbble](https://dribbble.com/shots/2452050-Record-Audio-Sample)
 
-#### [Read more about Horizon] (https://yalantis.com/blog/horizon-open-source-library-for-sound-visualization/)
+#### [Read more about Horizon](https://yalantis.com/blog/horizon-open-source-library-for-sound-visualization/)
 
 <img src="blog_article_header.png" alt="example" style="width:720;height:400">
 
